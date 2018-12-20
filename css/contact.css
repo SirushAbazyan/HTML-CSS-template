@@ -1,0 +1,160 @@
+body {
+    margin: 0px;
+}
+nav {
+    background-color: #009688;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+li {
+    display: inline-block;
+    padding: 2%;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+section {
+    width: 50%;
+    margin: auto;
+    padding: 2% 0%;
+}
+section p {
+    display: flex;
+    justify-content: space-around;
+}
+input[type="text"], input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    border: 2px solid #009688;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 2%;
+}
+.radio__container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.radio__container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radio__container:hover input ~ span {
+    background-color: #ccc;
+}
+.radio__container input:checked ~ span {
+    background-color: #009688;
+}
+.radio__container span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radio__container input:checked ~ span:after {
+    display: block;
+}
+.radio__container span:after {
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+.checkbox__container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox__container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+}
+.checkbox__container:hover input ~ span {
+    background-color: #ccc;
+}
+.checkbox__container input:checked ~ span {
+    background-color: #009688;
+}
+.checkbox__container span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox__container input:checked ~ span:after {
+    display: block;
+}
+.checkbox__container span:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+input[type="submit"] {
+    display: block;
+    margin: auto;
+    width: 50%;
+    color: white;
+    background-color: #009688;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 1%;
+    cursor: pointer;
+}
+footer {
+    background-color: #009688;
+}
+footer p {
+    color: white;
+    text-align: center;
+    padding: 1% 0%;
+}
+
+@media all and (max-width: 320px) {
+    ul {
+        flex-direction: column;
+    }
+    li {
+        margin: auto;
+    }
+}
